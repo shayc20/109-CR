@@ -1,0 +1,42 @@
+ion-title{
+    text-align: center;
+}
+
+.post{
+    background-color: #ff4301;
+    border: 2px #832402 solid;
+    border-radius: 5px;
+    margin: 15px 10px;
+    text-align: center;
+}
+
+.image{
+    margin-top: 1rem;
+    width: 80%;
+}
+
+.info{
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .message{
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .user{
+        text-align: right;
+        color: darkgray;
+        font-size: 15px;
+        margin-top: auto;
+    }
+}
+
+.timestamp{
+    font-size: 18px;
+    color: darkgrey;
+    letter-spacing: 1px;
+}

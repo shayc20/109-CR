@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Post a New Message
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Post a Message</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+
+      <ion-item class="ion-no-padding">
+        <ion-label>Message: </ion-label>
+        <ion-item>
+          <ion-input class="text" maxlength="250" placeholder="Max length 250 Char"  [(ngModel)]='model.text' name='text'></ion-input>
+        </ion-item>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label>Image URL:</ion-label>
+        <ion-input [(ngModel)]='model.imageUrl' name = 'imageURL'></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="ion-no-padding" >To:</ion-label>
+        <ion-select interface="alert" [(ngModel)]="model.to" name="to">
+          <ion-select-option value="Everyone">General</ion-select-option>
+          <ion-select-option *ngFor="let friend of myFriends" [value]="friend.name">{{ friend.name }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+
+      <ion-button color="primary" expand="block" (click)='sendPost()'>Post<ion-icon id="post" name="checkmark-circle-outline" ></ion-icon></ion-button>
+   
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>
